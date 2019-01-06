@@ -7,7 +7,9 @@ import (
 
 func main() {
 
-	e := echo.New()
+	//e := echo.New()
+	var e echo.Echo
+	e = *echo.New()
 
 	e.GET("/say", func(c echo.Context) error {
 		return c.JSON(http.StatusOK, "hi")
